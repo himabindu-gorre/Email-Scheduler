@@ -1,39 +1,3 @@
-// import cron from "node-cron";
-// import { getScheduledEmails, clearScheduledEmails } from "../controller/emailController.js";
-// import transporter from "../config/mailer.js";
-
-// cron.schedule("* * * * *", () => {
-//   getScheduledEmails((emails) => {
-//     if (!emails.length) return;
-
-//     console.log("Sending scheduled emails:", new Date().toISOString());
-
-//     const sentIds = [];
-
-//     emails.forEach((email) => {
-//       const mailOptions = {
-//         from: process.env.email,
-//         to: email.recipients.join(","),
-//         subject: email.subject,
-//         text: email.message,
-//       };
-
-//       transporter.sendMail(mailOptions, (error, info) => {
-//         if (error) {
-//           console.error(" Error sending email:", error);
-//         } else {
-//           console.log(`Email sent to ${mailOptions.to} - ${info.response}`);
-//           sentIds.push(email.id);
-//         }
-
-//         if (sentIds.length === emails.length) {
-//           clearScheduledEmails(sentIds);
-//         }
-//       });
-//     });
-//   });
-// });
-
 import cron from "node-cron";
 import { getScheduledEmails, clearScheduledEmails } from "../controller/emailController.js";
 import transporter from "../config/mailer.js";
