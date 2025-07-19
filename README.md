@@ -26,29 +26,38 @@ Sends custom HTML emails to multiple recipients
 
 Project Structure
 
+project-root/
+│
 ├── backend/
-│ ├── config/
-│ │ ├── db.js # MySQL DB connection
-│ │ └── mailer.js # Nodemailer transporter
-│ ├── controllers/
-│ │ └── emailController.js # Logic for email handling
-│ ├── emailModels/
-│ │ ├── emailModel.js
-│ │ └── emailScheduler.js
-│ ├── cronJobs/
-│ │ └── cronJobs.js # Cron job logic
-│ ├── Routes/
-│ │ └── emailRoutes.js # API endpoints
-│ ├── server.js # Express server entry
-│ └── .env # Environment variables
+│   ├── config/
+│   │   ├── db.js                # MySQL DB connection
+│   │   └── mailer.js            # Nodemailer transporter setup
+│   │
+│   ├── controllers/
+│   │   └── emailController.js   # Logic to handle email creation and scheduling
+│   │
+│   ├── emailModels/
+│   │   ├── emailModel.js        # Email table model
+│   │   └── emailScheduler.js    # Scheduler table model
+│   │
+│   ├── cronJobs/
+│   │   └── cronJobs.js          # Cron job to send scheduled emails
+│   │
+│   ├── Routes/
+│   │   └── emailRoutes.js       # API routes
+│   │
+│   ├── server.js                # Entry point of backend
+│   └── .env                     # Environment variables
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── Forms/
-│ │ │ └── EmailForm.jsx # Form to schedule emails
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ └── vite.config.js
+│   ├── src/
+│   │   ├── Forms/
+│   │   │   └── EmailForm.jsx    # Form to schedule emails
+│   │   ├── App.jsx              # Root component
+│   │   └── main.jsx             # Vite entry file
+│   │
+│   └── vite.config.js           # Vite config for frontend
+
 
 
 
