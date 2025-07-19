@@ -5,6 +5,7 @@ This is a MERN Stack project that schedules and sends emails at a specific time 
 <img width="1878" height="886" alt="Image" src="https://github.com/user-attachments/assets/dff3fcb1-a914-4177-a5dd-830256a82b43" />
 
  Features
+ 
 React-based frontend for email form
 
 Node.js/Express backend with:
@@ -20,6 +21,7 @@ MySQL database integration
 Sends custom HTML emails to multiple recipients
 
 Project Structure
+
 project-root/
 ├── backend/
 │   ├── config/
